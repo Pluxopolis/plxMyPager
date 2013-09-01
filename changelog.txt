@@ -1,0 +1,8 @@
+﻿## Version 1.2 (04/08/2013) ##
+BUG Mauvais url de pagination avec la réécriture d'url
+
+## Version 1.1 (15/02/2013) ##
+BUG Suppression du duplicate content pour l'url de la page 1
+
+## Version 1.0 (17/04/2012) ##
+version initiale
