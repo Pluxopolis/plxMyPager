@@ -1,5 +1,6 @@
 ﻿## Version 1.2.1 (28/08/2014) ##
 [+] Ajout de rel="prev" et rel="next" dans les liens précédent et suivant (contribution Etienne R.)
+[+] Ajout traduction en occitant (contribution Rubén)
 
 ## Version 1.2 (04/08/2013) ##
 BUG Mauvais url de pagination avec la réécriture d'url
