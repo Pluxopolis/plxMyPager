@@ -35,8 +35,45 @@ css.media = "screen";
 head.appendChild(css);
 </script>
 
-<h2><?php echo $plxPlugin->getInfo('title') ?></h2>
-
+<form class="inline-form" id="form_plxMyPager" action="parametres_plugin.php?p=plxMyPager" method="post">
+	<fieldset class="withlabel">
+		<p><?php $plxPlugin->lang('L_PAGER_CHECK_LIB') ?></p>
+		<p>
+			<input<?php echo $elmt0 ?> type="checkbox" id="id_elmt0" name="elmt0" value="1" />			
+			<label for="id_elmt0"><?php $plxPlugin->lang('L_PAGER_NUM_PAGES') ?>:</label>
+			<?php printf('<span class="p_page">'.ucfirst(L_PAGINATION).'</span>',1,10) ?>
+		</p>
+		<p>
+			<input<?php echo $elmt1 ?> type="checkbox" id="id_elmt1" name="elmt1" value="1" />
+			<label for="id_elmt1"><?php echo L_PAGINATION_FIRST_TITLE ?>&nbsp;:</label>
+			<?php echo '<span class="p_first">'.L_PAGINATION_FIRST.'</span>' ?>
+		</p>
+		<p>
+			<input<?php echo $elmt2 ?> type="checkbox" id="id_elmt2" name="elmt2" value="1" />		
+			<label for="id_elmt2"><?php echo L_PAGINATION_PREVIOUS_TITLE ?>&nbsp;:</label>
+			<?php echo '<span class="p_prev">'.L_PAGINATION_PREVIOUS.'</span>' ?>
+		</p>
+		<p>
+			<input<?php echo $elmt3 ?> type="checkbox" id="id_elmt3" name="elmt3" value="1" />
+			<label for="id_elmt3"><?php $plxPlugin->lang('L_PAGER_INDICATOR') ?>&nbsp;:</label>
+			<?php echo '<span class="p_page">...</span>' ?>
+		</p>
+		<p>
+			<input<?php echo $elmt4 ?> type="checkbox" id="id_elmt4" name="elmt4" value="1" />		
+			<label for="id_elmt4"><?php echo L_PAGINATION_NEXT_TITLE ?>&nbsp;:</label>
+			<?php echo '<span class="p_next">'.L_PAGINATION_NEXT.'</span>' ?>
+		</p>
+		<p>
+			<input<?php echo $elmt5 ?> type="checkbox" id="id_elmt5" name="elmt5" value="1" />		
+			<label for="id_elmt5"><?php echo L_PAGINATION_LAST_TITLE ?>&nbsp;:</label>
+			<?php echo '<span class="p_last">'.L_PAGINATION_LAST.'</span>' ?>
+		</p>
+		<p class="in-action-bar">
+			<?php echo plxToken::getTokenPostMethod() ?>
+			<input type="submit" name="submit" value="<?php $plxPlugin->lang('L_PAGER_SAVE') ?>" />
+		</p>
+	</fieldset>
+</form>
 <div class="p_exemple">
 <?php
 if($elmt0!='') printf('<span class="p_page">'.ucfirst(L_PAGINATION).'</span>',1,10);
@@ -53,34 +90,6 @@ if($elmt4!='') echo '<span class="p_next">'.L_PAGINATION_NEXT.'</span>';
 if($elmt5!='') echo '<span class="p_last">'.L_PAGINATION_LAST.'</span>';
 ?>
 </div>
-
-<form id="form_plxMyPager" action="parametres_plugin.php?p=plxMyPager" method="post">
-	<fieldset class="withlabel">
-		<h3><?php $plxPlugin->lang('L_PAGER_CHECK_LIB') ?></h3>
-		<p class="field"><label for="id_elmt0"><?php $plxPlugin->lang('L_PAGER_NUM_PAGES') ?>:</label></p>
-		<input<?php echo $elmt0 ?> type="checkbox" id="id_elmt0" name="elmt0" value="1" />
-		<?php printf('<span class="p_page">'.ucfirst(L_PAGINATION).'</span>',1,10) ?>
-		<p class="field"><label for="id_elmt1"><?php echo L_PAGINATION_FIRST_TITLE ?>&nbsp;:</label></p>
-		<input<?php echo $elmt1 ?> type="checkbox" id="id_elmt1" name="elmt1" value="1" />
-		<?php echo '<span class="p_first">'.L_PAGINATION_FIRST.'</span>' ?>
-		<p class="field"><label for="id_elmt2"><?php echo L_PAGINATION_PREVIOUS_TITLE ?>&nbsp;:</label></p>
-		<input<?php echo $elmt2 ?> type="checkbox" id="id_elmt2" name="elmt2" value="1" />
-		<?php echo '<span class="p_prev">'.L_PAGINATION_PREVIOUS.'</span>' ?>
-		<p class="field"><label for="id_elmt3"><?php $plxPlugin->lang('L_PAGER_INDICATOR') ?>&nbsp;:</label></p>
-		<input<?php echo $elmt3 ?> type="checkbox" id="id_elmt3" name="elmt3" value="1" />
-		<?php echo '<span class="p_page">...</span>' ?>
-		<p class="field"><label for="id_elmt4"><?php echo L_PAGINATION_NEXT_TITLE ?>&nbsp;:</label></p>
-		<input<?php echo $elmt4 ?> type="checkbox" id="id_elmt4" name="elmt4" value="1" />
-		<?php echo '<span class="p_next">'.L_PAGINATION_NEXT.'</span>' ?>
-		<p class="field"><label for="id_elmt5"><?php echo L_PAGINATION_LAST_TITLE ?>&nbsp;:</label></p>
-		<input<?php echo $elmt5 ?> type="checkbox" id="id_elmt5" name="elmt5" value="1" />
-		<?php echo '<span class="p_last">'.L_PAGINATION_LAST.'</span>' ?>
-		<p>
-			<?php echo plxToken::getTokenPostMethod() ?>
-			<input type="submit" name="submit" value="<?php $plxPlugin->lang('L_PAGER_SAVE') ?>" />
-		</p>
-	</fieldset>
-</form>
 <p>
 	<?php $plxPlugin->lang('L_PAGER_CSS_DESCRIPTION') ?><br />
 	.p_page : <?php $plxPlugin->lang('L_PAGER_CSS_ITEM') ?><br />

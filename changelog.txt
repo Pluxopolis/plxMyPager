@@ -1,4 +1,7 @@
-﻿## Version 1.2.1 (28/08/2014) ##
+﻿## Version 1.2.2 (13/05/2015) ##
+[+] Compatibilité PluXml 5.4
+
+## Version 1.2.1 (28/08/2014) ##
 [+] Ajout de rel="prev" et rel="next" dans les liens précédent et suivant (contribution Etienne R.)
 [+] Ajout traduction en occitant (contribution Rubén)
 
