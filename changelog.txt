@@ -1,4 +1,7 @@
-﻿## Version 1.2.2 (13/05/2015) ##
+﻿## Version 1.2.3 (11/03/2016) ##
+BUG Erreur pagination au délà de la page 9 (contribution gegeweb)
+
+## Version 1.2.2 (13/05/2015) ##
 [+] Compatibilité PluXml 5.4
 
 ## Version 1.2.1 (28/08/2014) ##

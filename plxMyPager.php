@@ -62,9 +62,7 @@ class plxMyPager extends plxPlugin {
 			echo "<span class=\"p_page\">...</span>";
 
 		for($i=$start;$i<=$stop;$i++) {
-			$url = $this->plxMotor->urlRewrite("?".$arg_url."page".$i);
-			$url = str_replace("index.php?page1", "",$url);
-			$url = str_replace("page1", "",$url);
+			$url = $this->plxMotor->urlRewrite("?".$arg_url.($i<=1?"":"page".$i));
 			if($i==$this->plxMotor->page)
 				echo "<span class=\"p_current\">".$i."</span>";
 			else
